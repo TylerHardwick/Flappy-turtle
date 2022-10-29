@@ -1,5 +1,5 @@
 from turtle import Turtle
-import random
+
 
 FLYSPEED = 35
 FALLSPEED = 10
@@ -21,4 +21,6 @@ class Bird(Turtle):
         new_y = self.ycor() - FALLSPEED
         self.sety(new_y)
 
+    def bird_rest(self):
+        self.goto(x=-100, y=0)
 

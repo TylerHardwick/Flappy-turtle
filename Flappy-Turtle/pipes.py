@@ -69,7 +69,16 @@ class PipeManager:
     def increase_speed(self):
         self.pipe_speed += SPEED_INCREASE
 
-        
-
+    def pipes_reset(self):
+        for pipe in self.pipe_list_upper:
+            pipe.goto(1000, 1000)
+        for pipe in self.pipe_list_lower:
+            pipe.goto(1000, 1000)
+        for pipe in self.pipe_list_opening:
+            pipe.goto(1000, 1000)
+        self.pipe_list_upper.clear()
+        self.pipe_list_lower.clear()
+        self.pipe_list_opening.clear()
+        self.assemble_pipe()
 
 
